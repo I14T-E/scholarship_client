@@ -1,8 +1,7 @@
 ### Scholarship Client
 
 This is a simple program written to practice a variety of different tools and techniques.
-In short, it is a basic sqlite database-backed "scholarship management system." The overall program design is outlinded below.
-
+In short, it is a basic sqlite database-backed "scholarship management system." The overall program design is outlinded below (created with the free trial of [StarUML](https://staruml.io "StarUML")).
 
 ![Diagram](/scholarship_client_uml.png)
 
@@ -15,7 +14,5 @@ You must also create the following two databases:
 
 
 For this project, I chose to implement the Table Data Gateway database access pattern. While it creates high coupling, I wanted to keep it relatively simple for this program.
-
-See the UML diagram outlining the implementation technique below (created with the free trial of [StarUML](https://staruml.io "StarUML")).
 
 
