@@ -15,13 +15,37 @@ The overall program design is outlinded below (diagram is created with the free 
 
 ### Setting Up the Program
 
-To run the program, you must also download the sqlite [.jar](/sqlite-jdbc-3.30.1.jar ".jar file") file and add it to the class path. A more indepth explanation over how to use the JDBC driver can be found [here](https://github.com/xerial/sqlite-jdbc#usage). 
+To run the program, you need:
 
+- The [program](/ScholarshipClient.java "Scholarship Program") itself
+- The [JDBC Driver](/sqlite-jdbc-3.30.1.jar "JDBC Driver")
 
-You must also create the following two databases:
+A more in-depth explanation over how to use the JDBC driver can be found [here](https://github.com/xerial/sqlite-jdbc#usage). 
+
+Start by downloading the two files above. You must then create the following two databases:
+
 - scholarships.db
 - students.db
 
+#### To Create the scholarships.db
 
-This [make file](/Makefile.txt "makefile") can be used to add the .jar file to the class path and compile the program. It also starts the program.
+Within the scholarships.db, create a table named sholarships with three columns: id, description, amount. To do this, run the following:
+
+```bash
+create table scholarships (id TEXT, description TEXT, amount TEXT);
+```
+
+And within the students.db, create a table named students with the three columns: namefirst, namelast, email. This can be done by running the following:
+
+```bash
+create table students (namefirst TEXT, namelast TEXT, email TEXT);
+```
+
+Finally, you must add the java jdbc driver to the filepath. Run the following command:
+
+```bash
+javac -classpath ".:sqlite-jdbc-[VERSION].jar" ScholarshipClient.java
+```
+
+Or, us this [make file](/Makefile.txt "makefile") can be used to add the .jar file to the class path and compile the program (within a macOS or Linux machine). It also starts the program.
 
