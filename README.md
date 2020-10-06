@@ -20,14 +20,14 @@ To run the program, you need:
 - The [program](/ScholarshipClient.java "Scholarship Program") itself
 - The [JDBC Driver](/sqlite-jdbc-3.30.1.jar "JDBC Driver")
 
-A more in-depth explanation over how to use the JDBC driver can be found [here](https://github.com/xerial/sqlite-jdbc#usage). 
+*A more in-depth explanation over how to use the JDBC driver can be found [here](https://github.com/xerial/sqlite-jdbc#usage).*
 
-Start by downloading the two files above. You must then create the following two databases:
+Start by downloading the two files above. You must then create the following two databases within SQLite:
 
 - scholarships.db
 - students.db
 
-#### To Create the scholarships.db
+#### To Create the scholarships Table
 
 Within the scholarships.db, create a table named sholarships with three columns: id, description, amount. To do this, run the following:
 
@@ -35,6 +35,7 @@ Within the scholarships.db, create a table named sholarships with three columns:
 create table scholarships (id TEXT, description TEXT, amount TEXT);
 ```
 
+#### To Create the students Table
 And within the students.db, create a table named students with the three columns: namefirst, namelast, email. This can be done by running the following:
 
 ```bash
