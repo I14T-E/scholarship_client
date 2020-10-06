@@ -48,5 +48,5 @@ Finally, you must add the java jdbc driver to the filepath. Run the following co
 javac -classpath ".:sqlite-jdbc-[VERSION].jar" ScholarshipClient.java
 ```
 
-Or, us this [make file](/Makefile.txt "makefile") can be used to add the .jar file to the class path and compile the program (within a macOS or Linux machine). It also starts the program.
+Or, use this [make file](/Makefile.txt "makefile") can be used to add the .jar file to the class path and compile the program (within a macOS or Linux machine). It also starts the program.
 
